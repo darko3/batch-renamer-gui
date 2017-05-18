@@ -30,3 +30,10 @@ void MainWindow::on_actionAuthor_triggered()
     authorDialog.setModal(true);
     authorDialog.exec();
 }
+
+void MainWindow::on_actionOpen_Folder_triggered()
+{
+    // Display an open folder dialog if the "Open Folder" action button was pressed
+    QString folder_name = QFileDialog::getExistingDirectory(this, tr("Open Folder"), "/", QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
+    ui->log->appendPlainText(folder_name);
+}

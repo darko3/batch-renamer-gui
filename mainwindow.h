@@ -19,6 +19,8 @@ private slots:
     void on_actionAuthor_triggered();
     void on_openFolderButton_clicked();
 
+    void on_actionOpen_Folder_triggered();
+
 private:
     Ui::MainWindow *ui;
 };
