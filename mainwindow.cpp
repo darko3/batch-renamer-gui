@@ -16,11 +16,19 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+QString MainWindow::selectFolder()
+{
+    QString folder_name = QFileDialog::getExistingDirectory(this, tr("Open Folder"), "/", QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
+    return folder_name;
+}
+
 void MainWindow::on_openFolderButton_clicked()
 {
     // Display an open folder dialog if the "Open Folder" button was pressed
-    QString folder_name = QFileDialog::getExistingDirectory(this, tr("Open Folder"), "/", QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
-    ui->log->appendPlainText(folder_name);
+    QString folder_name = selectFolder();
+    if(folder_name != "") {
+        ui->log->appendPlainText("Selected folder: \"" + folder_name + "\"");
+    }
 }
 
 void MainWindow::on_actionAuthor_triggered()
@@ -33,7 +41,11 @@ void MainWindow::on_actionAuthor_triggered()
 
 void MainWindow::on_actionOpen_Folder_triggered()
 {
-    // Display an open folder dialog if the "Open Folder" action button was pressed
-    QString folder_name = QFileDialog::getExistingDirectory(this, tr("Open Folder"), "/", QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
-    ui->log->appendPlainText(folder_name);
+    on_openFolderButton_clicked();
+}
+
+void MainWindow::on_actionExit_triggered()
+{
+    // Exit the program if the exit action button was pressed
+    MainWindow::close();
 }
