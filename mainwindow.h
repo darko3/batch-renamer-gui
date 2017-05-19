@@ -21,6 +21,9 @@ private slots:
 
     void on_actionOpen_Folder_triggered();
 
+    void on_actionExit_triggered();
+    QString selectFolder();
+
 private:
     Ui::MainWindow *ui;
 };
