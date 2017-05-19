@@ -114,6 +114,10 @@ QLineEdit::focus {
       <property name="text">
        <string>Open Folder</string>
       </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/images/resources/images/Open Folder_2.png</normaloff>:/images/resources/images/Open Folder_2.png</iconset>
+      </property>
       <property name="autoDefault">
        <bool>false</bool>
       </property>
@@ -173,6 +177,10 @@ QLineEdit::focus {
       <property name="text">
        <string>Aditional Settings</string>
       </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/images/resources/images/Services_3.png</normaloff>:/images/resources/images/Services_3.png</iconset>
+      </property>
      </widget>
     </item>
     <item row="6" column="5">
@@ -180,12 +188,20 @@ QLineEdit::focus {
       <property name="text">
        <string>Exit</string>
       </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/images/resources/images/Cancel_2.png</normaloff>:/images/resources/images/Cancel_2.png</iconset>
+      </property>
      </widget>
     </item>
     <item row="5" column="5">
      <widget class="QPushButton" name="renameButton">
       <property name="text">
        <string>Start Renaming</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/images/resources/images/Right_2.png</normaloff>:/images/resources/images/Right_2.png</iconset>
       </property>
      </widget>
     </item>
@@ -199,6 +215,11 @@ QLineEdit::focus {
      <width>619</width>
      <height>27</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
    </property>
    <property name="autoFillBackground">
     <bool>false</bool>
@@ -215,10 +236,15 @@ QMenuBar::item::pressed {
 }
 QMenu::item {
 	color: #EEEEEE;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: auto;
+	padding-right: auto;
 	background-color: rgba(117, 117, 117,1.0);
 }
 QMenu::item::selected {
 	color: #EEEEEE;
+	border: inherit;
 	background-color: rgba(238, 238, 238,0.2);
 }</string>
    </property>
@@ -229,6 +255,11 @@ QMenu::item::selected {
     <bool>true</bool>
    </property>
    <widget class="QMenu" name="menuFile">
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true"/>
     </property>
@@ -264,11 +295,22 @@ QMenu::item::selected {
    <addaction name="menuAbout"/>
   </widget>
   <action name="actionOpen_Folder">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/resources/images/Open Folder_2.png</normaloff>:/images/resources/images/Open Folder_2.png</iconset>
+   </property>
    <property name="text">
     <string>Open Folder</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
   </action>
   <action name="actionAuthor">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/resources/images/User Male.png</normaloff>:/images/resources/images/User Male.png</iconset>
+   </property>
    <property name="text">
     <string>Author</string>
    </property>
@@ -279,13 +321,22 @@ QMenu::item::selected {
    </property>
   </action>
   <action name="actionExit">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/resources/images/Cancel_2.png</normaloff>:/images/resources/images/Cancel_2.png</iconset>
+   </property>
    <property name="text">
     <string>Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
    </property>
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>exitButton</sender>

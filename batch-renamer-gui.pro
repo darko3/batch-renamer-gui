@@ -32,3 +32,6 @@ HEADERS  += mainwindow.h \
 
 FORMS    += mainwindow.ui \
     authordialog.ui
+
+RESOURCES += \
+    resources.qrc
