@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>resources/images/Cancel_2.png</file>
+        <file>resources/images/Open Folder_2.png</file>
+        <file>resources/images/Right_2.png</file>
+        <file>resources/images/Services_3.png</file>
+        <file>resources/images/User Male.png</file>
+    </qresource>
+</RCC>
