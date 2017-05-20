@@ -18,10 +18,9 @@ public:
 private slots:
     void on_actionAuthor_triggered();
     void on_openFolderButton_clicked();
-
     void on_actionOpen_Folder_triggered();
-
     void on_actionExit_triggered();
+    void on_renameButton_clicked();
     QString selectFolder();
 
 private:
