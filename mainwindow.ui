@@ -82,6 +82,9 @@ QLineEdit::focus {
       <property name="enabled">
        <bool>true</bool>
       </property>
+      <property name="cursor" stdset="0">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
       <property name="whatsThis">
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This is the log output. Here you can see everything the program is doing.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>

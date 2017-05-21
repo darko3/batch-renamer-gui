@@ -25,10 +25,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    authordialog.cpp
+    authordialog.cpp \
+    renamer.cpp
 
 HEADERS  += mainwindow.h \
-    authordialog.h
+    authordialog.h \
+    renamer.h
 
 FORMS    += mainwindow.ui \
     authordialog.ui
