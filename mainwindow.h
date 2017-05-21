@@ -16,6 +16,9 @@ public:
     ~MainWindow();
 
 private slots:
+    void onFileRenamed(QString file_name);
+    void onError(QString title, QString description);
+    void onSuccess(QString title, QString description);
     void on_actionAuthor_triggered();
     void on_openFolderButton_clicked();
     void on_actionOpen_Folder_triggered();
